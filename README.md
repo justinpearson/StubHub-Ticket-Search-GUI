@@ -13,10 +13,23 @@ This program does 3 things:
 
 Notes:
 
-- This project requires the excellent lightweight browser-based GUI framework `browsergui`. Install with 
+- This project requires [browsergui](github.com/speezepearson/browsergui) -- an excellent lightweight browser-based GUI framework. Install with 
     - `easy_install browsergui`
     - or
     - `pip3 install browsergui`
 
 - Running `main.py` will show you the GUI running with some example ticket data.
 
+
+# Why needed?
+
+The StubHub website interface has some problems:
+
+- can't search across multiple events
+- can't search for certain rows
+- can't search for certain seats within row
+- can't search for certain sections
+
+[Example:](https://www.stubhub.com/the-book-of-mormon-san-jose-tickets/performer/1496118/)
+
+![alt txt](Images/stubhub-interface.jpg)
