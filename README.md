@@ -13,7 +13,7 @@ This program does 3 things:
 
 Notes:
 
-- This project requires You need the excellent lightweight browser-based GUI framework `browsergui`. Install with 
+- This project requires the excellent lightweight browser-based GUI framework `browsergui`. Install with 
     - `easy_install browsergui`
     - or
     - `pip3 install browsergui`
