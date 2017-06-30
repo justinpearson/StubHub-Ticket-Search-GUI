@@ -1,0 +1,1 @@
+Uncomment the 'you-try' lines in the beginning of main.py and run main.py to fill up this empty dir with ticket data.
