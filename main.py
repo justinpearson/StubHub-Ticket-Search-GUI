@@ -49,8 +49,6 @@ have_event_htmls    = len([f for f in os.listdir(html_dir) if f.lower().endswith
 
 import sys
 
-assert sys.version_info >= (3,6), "Python version <3.6 detected; I dev'd this on my python 3.6 distro, so you may need to eg replace strings like f'Value: \{i\}' ."
-
 try:
     import browsergui
     del browsergui
@@ -61,8 +59,6 @@ except ImportError:
         More info: https://github.com/speezepearson/browsergui
         ''')
     sys.exit(1)
-
-
 
 
 
@@ -289,7 +285,7 @@ else:
 
     pickle.dump(tix,open(ticket_data_file,'wb'))
 
-    print(f'Saved ticket data to {ticket_data_file}.')
+    print('Saved ticket data to: '+ticket_data_file+'.')
 
 
 
@@ -317,7 +313,7 @@ class TicketSearcher(object):
         # print(tix)
         self.tix = tix
         self.NUM_TIX = len(tix)
-        print(f'Loaded {self.NUM_TIX} tickets from {picklefile}.')
+        print('Loaded {} tickets from {}.'.format(self.NUM_TIX,picklefile))
         # Data-checking
         assert self.NUM_TIX > 0, "No tickets in pickle??"
         assert all( t.keys() == tix[0].keys() for t in tix ), 'Not all ticket dicts have same keys??'
@@ -438,7 +434,7 @@ class SearchGUI(GUI):
                 e.css['padding']='5px'
 
         g=Grid([
-                [Text(f'Search results: {len(results)} tickets:')],
+                [Text('Search results: {} tickets:'.format(len(results)))],
                 [Grid([self.header,*text_results],
                     n_rows=len(results)+1, 
                     n_columns=len(self.header)

@@ -41,7 +41,7 @@ class MinMaxSliderBlock(object):
         slider_grid = Grid([[self.min_slider],[self.max_slider]])
         slider_grid.css['display'] = 'inline'
 
-        header = Container( Text(f'{self.name}: ['),   
+        header = Container( Text(self.name+': ['),   
                                         self.min_text,
                                         Text(' - '),
                                         self.max_text,

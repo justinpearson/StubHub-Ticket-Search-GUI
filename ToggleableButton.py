@@ -16,7 +16,7 @@ class ToggleableButton(object):
                 self.button.css.update(UNPRESSED) 
 
         def onClick():
-            print(f'Button {self.button.text} clicked!')
+            print('Button '+self.button.text+' clicked!')
             self.pressed = not(self.pressed)
             style_me(self)
             callback()
@@ -36,7 +36,7 @@ def main():
 
     def cb():
         evens = [x for x in data if x%2==0]
-        print(f'Evens: {evens}')
+        print('Evens:',evens)
 
     data = range(10)
     b = ToggleableButton(name='print ',callback=cb)
